@@ -1,0 +1,55 @@
+#include<iostream>
+#include <conio.h>
+#include<string.h>
+
+
+#definirmaxPatron50
+#define maxTexto 500
+
+Uso delespacio de nombresSTD;
+
+voidFuerzaBruta(char[],char[],int,int);
+
+int main(void)
+{
+    carbonizar Texto[maxTexto];
+    carbonizar Patrón[maxPatrón];
+    int n, m;
+cout <<"INGRESE TEXTO:";
+    cin>>(Texto);
+    n = strlen(Texto);
+    hacer {
+cout <<"\n\nINGRESE PATRÓN:";
+cin >> Patrón;
+m =strlen(Patrón);
+      
+    } while (m > n); 
+
+    
+    FuerzaBruta(Texto, Patron, n, m);   
+   
+
+  
+
+}
+
+
+voidFuerzaBruta(char texto[],charpatron[],int n,intm)
+{
+    int i, j, k, cont = 0;
+    char temp[100];
+    for (i = 0; i <= n; i++)
+    {
+        for (j = i, k = 0; j < m; j++, k++)
+            temp[k] = texto[i + k];
+temp[k] ='\0';
+        if(strcmp(patrón, temp) ==0)
+        {
+cout <<"\n POSICION :"<< i <<"\n";
+            cont++;
+        }
+        m++;
+    }
+cout <<"\n\nREPETICIONES :"<< cont << endl;
+
+}
